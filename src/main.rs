@@ -236,9 +236,11 @@ fn use_base() -> View {
     view! {
         HEAD {
             @use_meta [Meta::new()
-                .title("my website")
+                .title("darcy's website")
+                .desc("Welcome to my website.")
+                .color("#86b1b0")
             ]
-            title { "my website" }
+            title { "darcy's website" }
             link [rel="shortcut icon", href=url!("static/icon.png")]/
             link [rel="stylesheet", href=url!("css/base.css")]/
         }
