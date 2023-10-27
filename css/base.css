@@ -1,8 +1,96 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #111;
-  color: white;
+  background-color: #1f272d;
+  color: #E6E6E6;
 }
 body a {
   color: inherit;
+  text-decoration-color: #3d605f;
+  text-decoration-thickness: 0.5px;
+}
+body a:hover, body a :focus-within {
+  text-decoration-color: #FF8C8C;
+}
+@media screen {
+  body .heading {
+    margin-top: 30px;
+  }
+}
+body .heading h1 {
+  color: #86b1b0;
+  margin-bottom: 0;
+}
+body .heading h2 {
+  color: #FF8C8C;
+}
+body .heading p {
+  color: #E6E6E6;
+}
+body main {
+  display: flex;
+  justify-content: center;
+}
+@media screen {
+  body main {
+    margin-top: 30px;
+  }
+}
+@media screen {
+  body main article {
+    min-width: 300px;
+    width: 80%;
+    max-width: 800px;
+    padding: 20px 40px 30px 40px;
+    background-color: #232C33;
+  }
+}
+@media print {
+  body main article section {
+    break-inside: avoid;
+  }
+}
+body main article hr {
+  width: 60%;
+  margin: 30px auto;
+  color: #3d605f;
+}
+body main article hr:first-of-type {
+  margin-top: 40px;
+}
+@media print {
+  body main article hr {
+    display: none;
+  }
+}
+body main article h2 {
+  text-align: center;
+  color: #FF8C8C;
+}
+body main article h3 {
+  color: #86b1b0;
+}
+body main article em {
+  color: #af7fa8;
+}
+body main article center > ul {
+  margin: 0px;
+  padding: 0px;
+}
+body main article ul {
+  margin-top: 0;
+  display: inline-block;
+}
+body main article blockquote {
+  border-left: 4px solid #3d605f;
+  padding-left: 15px;
+}
+body footer {
+  margin: 20px 0 40px 0;
+  text-align: center;
+  color: #3d605f;
+}
+@media print {
+  body footer {
+    display: none;
+  }
 }
