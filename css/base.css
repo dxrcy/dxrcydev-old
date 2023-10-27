@@ -87,7 +87,8 @@ body main article blockquote {
 body footer {
   margin: 20px 0 40px 0;
   text-align: center;
-  color: #3d605f;
+  color: #86b1b0;
+  opacity: 0.3;
 }
 @media print {
   body footer {
