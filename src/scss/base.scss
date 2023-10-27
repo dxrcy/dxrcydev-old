@@ -107,7 +107,8 @@ body {
     footer {
         margin: 20px 0 40px 0;
         text-align: center;
-        color: $c-darkblue;
+        color: $c-blue;
+        opacity: 0.3;
         @media print {
             display: none;
         }
