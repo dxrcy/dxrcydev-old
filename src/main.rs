@@ -44,23 +44,24 @@ fn at_index() -> Document {
                 li { "CLI apps and simple tools" }
                 li { "Static site generation frameworks" }
                 li { "Procedural macros" }
-                li { "Egui (UI framework)" }
-                li { "GGez (Graphics framework)" }
+                li { i{"Egui"}~"(UI framework)" }
+                li { i{"GGez"}~" (Graphics framework)" }
             }
             h3 { "Javascript / Typescript" }
             ul {
                 li { "Client-side vanilla javascript with HTML and CSS or SCSS" }
-                li { "Server-side Node.JS, Express" }
-                li { "React single page applications" }
+                li { "Server-side"~i{"Node.JS"}","~i{"Express"} }
+                li { i{"React"}~"single page applications" }
             }
             h3 { "Other" }
             ul {
-                li { "Posix-compliant shell scripting (like Bash)" }
-                li { "Popular CLI tools, like coreutils, ffmpeg, etc." }
-                li { "Some Lua, Haskell, and Handlebars" }
+                li { "Posix-compliant shell scripting (like"~i{"Bash"}")" }
+                li { "Popular CLI tools, like"~i{"coreutils"}","~i{"FFmpeg"}", etc." }
+                li { "Some "~i{"Lua"}","~i{"Haskell"}", and"~i{"Handlebars"} }
+                li { "Previously,"~i{"Python"}~"and"~i{"AutoHotkey"}", but I have not used them in a while." }
             }
             p {
-                "I plan to learn Go and C."
+                "I also plan to learn"~i{"Go"}~"and"~i{"C"}"."
             }
         }
 
@@ -84,7 +85,7 @@ fn at_index() -> Document {
                             { "a basic SSG template" }
                        ", or"
                         ~ a [href="https://github.com/darccyy/darccyy.github.io"]
-                            { "the source code for this website" }
+                            { "the source code for"~b{"this"}~"website" }
                     }
                 }
                 li { h3 { i{"CTTab"} ~ "- A customizable 'new tab' page for the browser" }
@@ -96,6 +97,9 @@ fn at_index() -> Document {
                         "Check out"
                         ~ a [href="https://github.com/darccyy/cttab"]
                             { "CTTab on GitHub" }
+                       ", or"
+                        ~ a [href="https://darccyy.github.io/cttab"]
+                            { "a live example" }
                     }
                 }
                 li { h3 { i{"EveryGarf"} ~ "- Download every"~i{"Garfield"}~"comic as an image" }
@@ -126,6 +130,19 @@ fn at_index() -> Document {
                         ", or on"
                         ~ a [href="https://crates.io/crates/phonet"]
                             { "Crates.io" }
+                    }
+                }
+                li { h3 { i{"Garf-EO"} ~ "- Garfield comics in Esperanto" }
+                    p {
+                        "500+ comics translated to Esperanto by your's truly."
+                    }
+                    blockquote {
+                        "Check out"
+                        ~ a [href="https://darccyy.github.io/garfeo"]
+                            { "Garfield Esperanto (website)" }
+                        ", or"
+                        ~ a [href="https://github.com/darccyy/garfeo"]
+                            { "the source code" }
                     }
                 }
                 li { h3 { i{"The Trustworthy Times"} ~ "- A satirical news website (funny)" }
