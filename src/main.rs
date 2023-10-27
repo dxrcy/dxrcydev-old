@@ -220,8 +220,14 @@ fn at_index() -> Document {
 fn at_404() -> Document {
     view! {
         @use_base[]
-        h1 { "404 - Not found" }
-        a [href=url!()] { "Did you mean to go the main page?" }
+
+        center [class="heading"] {
+            h1 { "darcy's website" }
+            h2 { "404 - Not found" }
+            p {
+                a [href=url!()] { "Did you mean to go the main page?" }
+            }
+        }
     }
     .into()
 }
