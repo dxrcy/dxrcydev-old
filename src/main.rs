@@ -72,7 +72,7 @@ fn at_index() -> Document {
 
             hr/
             section { h2 { "Projects" }
-                ul {
+                ul [class="big-list"] {
                     li { h3 { em{"Ibex"} ~ "- Static site generation framework for Rust" }
                         p {
                             "Write HTML-style templates, which compile to static HTML files."
@@ -182,7 +182,7 @@ fn at_index() -> Document {
 
                 h3 { "Other projects" }
                 p { "Which are either unmaintained or less interesting." }
-                ul {
+                ul [class="small-list"] {
                     li { a [href="https://github.com/darccyy/recipe-lang"]
                         { "Programming language written like a cooking recipe" }
                     }

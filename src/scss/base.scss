@@ -1,4 +1,4 @@
-$c-background: #1f272d;
+$c-background: #1d2328;
 $c-article:    #232C33;
 $c-text:       #E6E6E6;
 $c-blue:       #86b1b0;
@@ -46,9 +46,7 @@ body {
 
         article {
             @media screen {
-                min-width: 300px;
-                width: 80%;
-                max-width: 800px;
+                width: clamp(300px, 80%, 800px);
                 padding: 20px 40px 30px 40px;
                 background-color: $c-article;
             }
@@ -93,8 +91,24 @@ body {
             }
 
             ul {
-                margin-top: 0;
                 display: inline-block;
+                margin-top: 0;
+                &.small-list {
+                    li:not(:first-of-type) {
+                        margin-top: 15px;
+                    }
+                }
+                &.big-list {
+                    li:not(:first-of-type) {
+                        margin-top: 30px;
+                    }
+                    @media (max-width: 600px) {
+                        padding-left: 10px;
+                        li:not(:first-of-type) {
+                            margin-top: 50px;
+                        }
+                    }
+                }
             }
 
             blockquote {
