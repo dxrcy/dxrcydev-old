@@ -51,24 +51,24 @@ fn at_index() -> Document {
                     li { "CLI apps and simple tools" }
                     li { "Static site generation frameworks" }
                     li { "Procedural macros" }
-                    li { i{"Egui"}~"(UI framework)" }
-                    li { i{"GGez"}~" (Graphics framework)" }
+                    li { "Egui (UI framework)" }
+                    li { "GGez (Graphics framework)" }
                 }
                 h3 { "Javascript / Typescript" }
                 ul {
                     li { "Client-side vanilla javascript with HTML and CSS or SCSS" }
-                    li { "Server-side"~i{"Node.JS"}","~i{"Express"} }
-                    li { i{"React"}~"single page applications" }
+                    li { "Server-side Node.JS, Express" }
+                    li { "React single page applications" }
                 }
                 h3 { "Other" }
                 ul {
-                    li { "Posix-compliant shell scripting (like"~i{"Bash"}")" }
-                    li { "Popular CLI tools, like"~i{"coreutils"}","~i{"FFmpeg"}", etc." }
-                    li { "Some "~i{"Lua"}","~i{"Haskell"}", and"~i{"Handlebars"} }
-                    li { "Previously,"~i{"Python"}~"and"~i{"AutoHotkey"}", but I have not used them in a while." }
+                    li { "Posix-compliant shell scripting (like Bash)" }
+                    li { "Popular CLI tools, like coreutils, FFmpeg, etc." }
+                    li { "Some Lua, Haskell, and Handlebars" }
+                    li { "Previously, Python and AutoHotkey, but I have not used them in a while." }
                 }
                 p {
-                    "I also plan to learn"~i{"Go"}~"and"~i{"C"}"."
+                    "I also plan to learn Go and C."
                 }
             }
 
