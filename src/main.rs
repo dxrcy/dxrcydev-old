@@ -20,7 +20,9 @@ fn at_index() -> Document {
         center [class="heading"] {
             h1 { "darcy's website" }
             p {
+                span { &laquo }
                 "Welcome to my website."
+                span { &raquo }
             }
         }
 
@@ -205,8 +207,8 @@ fn at_index() -> Document {
                     ~a[href="https://github.com/darccyy/dotfiles"]{"here"}
                     ", if you are interested."
                 }
-                p { em{"Operating System:"} ~ "EndevourOS (Arch-based Linux), with i3 Window Manager." }
-                p { em{"Programming:"}      ~ "Tmux + Neovim + Git" }
+                p { strong{"Operating System:"} ~ "EndevourOS (Arch-based Linux), with i3 Window Manager." }
+                p { strong{"Programming:"}      ~ "Tmux + Neovim + Git" }
             }
         }}
 

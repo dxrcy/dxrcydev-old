@@ -33,6 +33,10 @@ body {
         }
         p {
             color: $c-text;
+            span {
+                color: $c-blue;
+                padding: 0 10px;
+            }
         }
     }
 
@@ -79,7 +83,7 @@ body {
                 color: $c-blue;
             }
 
-            em {
+            em, strong {
                 color: $c-purple;
             }
 
