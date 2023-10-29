@@ -201,7 +201,7 @@ fn at_index() -> Document {
             }
 
             hr/
-            section { h2 { "My Workflow" }
+            section { h2 { "Workflow" }
                 p {
                     "All my"~i{"dotfiles"}~"are available"
                     ~a[href="https://github.com/darccyy/dotfiles"]{"here"}
