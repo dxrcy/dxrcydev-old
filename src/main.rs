@@ -17,7 +17,7 @@ fn at_index() -> Document {
     view! {
         @use_base[]
 
-        center [class="heading"] {
+        center [class="header"] {
             h1 { "darcy's website" }
             p {
                 span { &laquo }
