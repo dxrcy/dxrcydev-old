@@ -12,21 +12,21 @@ body a:hover, body a :focus-within {
   text-decoration-color: #FF8C8C;
 }
 @media screen {
-  body .heading {
+  body .header {
     margin-top: 30px;
   }
 }
-body .heading h1 {
+body .header h1 {
   color: #86b1b0;
   margin-bottom: 0;
 }
-body .heading h2 {
+body .header h2 {
   color: #FF8C8C;
 }
-body .heading p {
+body .header p {
   color: #E6E6E6;
 }
-body .heading p span {
+body .header p span {
   color: #86b1b0;
   padding: 0 10px;
 }
