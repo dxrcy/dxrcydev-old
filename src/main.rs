@@ -223,7 +223,7 @@ fn at_404() -> Document {
     view! {
         @use_base[]
 
-        center [class="heading"] {
+        center [class="header"] {
             h1 { "darcy's website" }
             h2 { "404 - Not found" }
             p {
