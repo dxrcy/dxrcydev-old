@@ -15,9 +15,9 @@ fn main() {
 
 fn at_index() -> Document {
     view! {
-        @use_base[]
+        @use_base
 
-        center [class="header"] {
+        center ."header" {
             h1 { "darcy's website" }
             p {
                 span { &laquo }
@@ -74,7 +74,7 @@ fn at_index() -> Document {
 
             hr/
             section { h2 { "Projects" }
-                ul [class="big-list"] {
+                ul ."big-list" {
                     li { h3 { em{"Ibex"} ~ "- Static site generation framework for Rust" }
                         p {
                             "Write HTML-style templates, which compile to static HTML files."
@@ -184,7 +184,7 @@ fn at_index() -> Document {
 
                 h3 { "Other projects" }
                 p { "Which are either unmaintained or less interesting." }
-                ul [class="small-list"] {
+                ul ."small-list" {
                     li { a [href="https://github.com/darccyy/recipe-lang"]
                         { "Programming language written like a cooking recipe" }
                     }
@@ -221,9 +221,9 @@ fn at_index() -> Document {
 
 fn at_404() -> Document {
     view! {
-        @use_base[]
+        @use_base
 
-        center [class="header"] {
+        center ."header" {
             h1 { "darcy's website" }
             h2 { "404 - Not found" }
             p {
@@ -238,8 +238,11 @@ fn use_base() -> View {
     view! {
         HEAD {
             @use_meta [Meta::new()
+                .url(url!())
                 .title("darcy's website")
                 .desc("Welcome to my website.")
+                .image(url!("static/icon.png"))
+                .author("darcy")
                 .color("#86b1b0")
             ]
             title { "darcy's website" }
