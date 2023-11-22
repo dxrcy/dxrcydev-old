@@ -1,0 +1,114 @@
+// ------ COLORS
+// Text color
+$c-text:       hsl(0deg,   0,    90%);
+// Main colors (similar)
+$c-main:       hsl(205deg, 19%,  17%);
+$c-background: adjust-color($c-main,     $hue: 0deg,   $saturation: -3%,  $lightness: -3.5%);
+$c-bright:     adjust-color($c-main,     $hue: -30deg, $saturation: 5%,   $lightness: 45%);
+$c-subtle:     adjust-color($c-bright,   $hue: 10deg,  $saturation: 0%,   $lightness: -30%);
+// Accent colors
+$c-accent-a:   hsl(0deg,   100%, 77%);
+$c-accent-b:   adjust-color($c-accent-a, $hue: -60deg, $saturation: -75%, $lightness: -15%);
+
+// ------ FONTS
+// Serif
+$f-serif: initial;
+// Sans-serif
+$f-sans:  Arial, Helvetica, sans-serif;
+
+body {
+    background-color: $c-background;
+
+    main.ibexus {
+        color: $c-text;
+        font-family: $f-sans;
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: $f-serif;
+        }
+
+        a {
+            color: inherit;
+            text-decoration-color: $c-subtle;
+            text-decoration-thickness: 0.5px;
+            &:hover, :focus-within  {
+                text-decoration-color: $c-accent-a;
+            }
+        }
+
+        >.header {
+            @media screen {
+                margin-top: 30px;
+            }
+            h1 {
+                color: $c-bright;
+                margin-bottom: 0;
+            }
+            h2 {
+                color: $c-accent-a;
+            }
+        }
+
+        >article {
+            margin: auto;
+
+            @media screen {
+                width: clamp(300px, 80%, 800px);
+                padding: 20px 40px 30px 40px;
+                background-color: $c-main;
+            }
+
+            hr {
+                width: 60%;
+                margin: 30px auto;
+                color: $c-subtle;
+
+                &:first-of-type {
+                    margin-top: 40px;
+                }
+
+                @media print {
+                    display: none;
+                }
+            }
+
+            h2 {
+                text-align: center;
+                color: $c-accent-a;
+            }
+            h3 {
+                color: $c-bright;
+            }
+
+            ul {
+                display: inline-block;
+            }
+            center >ul {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            blockquote {
+                border-left: 4px solid $c-subtle;
+                padding-left: 15px;
+            }
+
+            em, strong {
+                color: $c-accent-b;
+            }
+        }
+    }
+
+    footer {
+        margin: 30px 0 40px 0;
+        text-align: center;
+        color: mix($c-bright, $c-background, 50%);
+
+        &::before, &::after { 
+            content: "\2014";
+            padding: 10px;
+            color: mix($c-bright, $c-background, 20%);
+        }
+    }
+}
+

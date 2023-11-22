@@ -1,104 +1,16 @@
-// Text color
-$c-text:       hsl(0deg,   0,    90%);
-// Main colors (similar)
-$c-main:       hsl(205deg, 19%,  17%);
-$c-background: adjust-color($c-main,     $hue: 0deg,   $saturation: -3%,  $lightness: -3.5%);
-$c-bright:     adjust-color($c-main,     $hue: -30deg, $saturation: 5%,   $lightness: 45%);
-$c-subtle:     adjust-color($c-bright,   $hue: 10deg,  $saturation: 0%,   $lightness: -30%);
-// Accent colors
-$c-accent-a:   hsl(0deg,   100%, 77%);
-$c-accent-b:   adjust-color($c-accent-a, $hue: -60deg, $saturation: -75%, $lightness: -15%);
+@import "src/scss/ibexus.scss";
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: $c-background;
-    color: $c-text;
-
-    a {
-        color: inherit;
-        text-decoration-color: $c-subtle;
-        text-decoration-thickness: 0.5px;
-        &:hover, :focus-within  {
-            text-decoration-color: $c-accent-a;
-        }
-    }
-
-    .header {
-        @media screen {
-            margin-top: 30px;
-        }
-        h1 {
-            color: $c-bright;
-            margin-bottom: 0;
-        }
-        h2 {
-            color: $c-accent-a;
-        }
-        p {
-            color: $c-text;
-            span {
+    main.ibexus {
+        >.header {
+            p span {
                 color: $c-bright;
                 padding: 0 10px;
             }
         }
-    }
 
-    main {
-        display: flex;
-        justify-content: center;
-
-        @media screen {
-            margin-top: 30px;
-        }
-
-        article {
-            @media screen {
-                width: clamp(300px, 80%, 800px);
-                padding: 20px 40px 30px 40px;
-                background-color: $c-main;
-            }
-
-            section {
-                @media print {
-                    break-inside: avoid;
-                }
-            }
-
-            hr {
-                width: 60%;
-                margin: 30px auto;
-                color: $c-subtle;
-
-                &:first-of-type {
-                    margin-top: 40px;
-                }
-
-                @media print {
-                    display: none;
-                }
-            }
-
-            h2 {
-                text-align: center;
-                color: $c-accent-a;
-            }
-            h3 {
-                color: $c-bright;
-            }
-
-            em, strong {
-                color: $c-accent-b;
-            }
-
-            center {
-                > ul {
-                    margin: 0px;
-                    padding: 0px;
-                }
-            }
-
+        >article {
             ul {
-                display: inline-block;
                 margin-top: 0;
                 &.small-list {
                     li:not(:first-of-type) {
@@ -117,21 +29,12 @@ body {
                     }
                 }
             }
-
-            blockquote {
-                border-left: 4px solid $c-subtle;
-                padding-left: 15px;
-            }
         }
-    }
 
-    footer {
-        margin: 20px 0 40px 0;
-        text-align: center;
-        color: $c-bright;
-        opacity: 0.3;
-        @media print {
-            display: none;
+        footer {
+            @media print {
+                display: none;
+            }
         }
     }
 }

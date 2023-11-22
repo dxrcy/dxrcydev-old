@@ -14,9 +14,7 @@ fn main() {
 }
 
 fn at_index() -> Document {
-    view! {
-        @use_base
-
+    view! { @use_base {
         center ."header" {
             h1 { "darcy's website" }
             p {
@@ -26,7 +24,7 @@ fn at_index() -> Document {
             }
         }
 
-        main { article {
+        article {
             section { h2 { "About Me" }
                 center {
                     "I like programming and languages."
@@ -210,19 +208,17 @@ fn at_index() -> Document {
                 p { strong{"Operating System:"} ~ "EndevourOS (Arch-based Linux), with i3 Window Manager." }
                 p { strong{"Programming:"}      ~ "Tmux + Neovim + Git" }
             }
-        }}
+        }
 
         footer {
             "Thanks for checking out my website!"
         }
-    }
+    } }
     .into()
 }
 
 fn at_404() -> Document {
-    view! {
-        @use_base
-
+    view! { @use_base {
         center ."header" {
             h1 { "darcy's website" }
             h2 { "404 - Not found" }
@@ -230,11 +226,11 @@ fn at_404() -> Document {
                 a [href=url!()] { "Did you mean to go the main page?" }
             }
         }
-    }
+    } }
     .into()
 }
 
-fn use_base() -> View {
+fn use_base(children: View) -> View {
     view! {
         HEAD {
             @use_meta [Meta::new()
@@ -249,5 +245,10 @@ fn use_base() -> View {
             link [rel="shortcut icon", href=url!("static/icon.png")]/
             link [rel="stylesheet", href=url!("css/base.css")]/
         }
+
+        main ."ibexus" {
+            [children]
+        }
     }
 }
+
