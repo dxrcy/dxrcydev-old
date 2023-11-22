@@ -9,8 +9,8 @@ fn main() {
         (/404) => at_404(),
     ];
 
-    ssg::quick_build(routes).unwrap();
-    println!("All done!");
+    ssg::quick_build(routes).expect("Failed to build");
+    println!("\x1b[34;1mBuilt successfully!\x1b[0m");
 }
 
 fn at_index() -> Document {
@@ -244,6 +244,7 @@ fn use_base(children: View) -> View {
             title { "darcy's website" }
             link [rel="shortcut icon", href=url!("static/icon.png")]/
             link [rel="stylesheet", href=url!("css/base.css")]/
+            @ssg::use_autoreload
         }
 
         main ."ibexus" {
