@@ -83,30 +83,3 @@ body footer::before, body footer::after {
   padding: 10px;
   color: #324043;
 }
-
-body main.ibexus > .header p span {
-  color: #87b5b1;
-  padding: 0 10px;
-}
-body main.ibexus > article ul {
-  margin-top: 0;
-}
-body main.ibexus > article ul.small-list li:not(:first-of-type) {
-  margin-top: 15px;
-}
-body main.ibexus > article ul.big-list li:not(:first-of-type) {
-  margin-top: 30px;
-}
-@media (max-width: 600px) {
-  body main.ibexus > article ul.big-list {
-    padding-left: 10px;
-  }
-  body main.ibexus > article ul.big-list li:not(:first-of-type) {
-    margin-top: 50px;
-  }
-}
-@media print {
-  body main.ibexus footer {
-    display: none;
-  }
-}
