@@ -1,10 +1,13 @@
-$c-background: #1d2328;
-$c-article:    #232C33;
-$c-text:       #E6E6E6;
-$c-blue:       #86b1b0;
-$c-darkblue:   #3d605f;
-$c-accent:     #FF8C8C;
-$c-purple:     #af7fa8;
+// Text color
+$c-text:       hsl(0deg,   0,    90%);
+// Main colors (similar)
+$c-main:       hsl(205deg, 19%,  17%);
+$c-background: adjust-color($c-main,     $hue: 0deg,   $saturation: -3%,  $lightness: -3.5%);
+$c-bright:     adjust-color($c-main,     $hue: -30deg, $saturation: 5%,   $lightness: 45%);
+$c-subtle:     adjust-color($c-bright,   $hue: 10deg,  $saturation: 0%,   $lightness: -30%);
+// Accent colors
+$c-accent-a:   hsl(0deg,   100%, 77%);
+$c-accent-b:   adjust-color($c-accent-a, $hue: -60deg, $saturation: -75%, $lightness: -15%);
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -13,10 +16,10 @@ body {
 
     a {
         color: inherit;
-        text-decoration-color: $c-darkblue;
+        text-decoration-color: $c-subtle;
         text-decoration-thickness: 0.5px;
         &:hover, :focus-within  {
-            text-decoration-color: $c-accent;
+            text-decoration-color: $c-accent-a;
         }
     }
 
@@ -25,16 +28,16 @@ body {
             margin-top: 30px;
         }
         h1 {
-            color: $c-blue;
+            color: $c-bright;
             margin-bottom: 0;
         }
         h2 {
-            color: $c-accent;
+            color: $c-accent-a;
         }
         p {
             color: $c-text;
             span {
-                color: $c-blue;
+                color: $c-bright;
                 padding: 0 10px;
             }
         }
@@ -52,7 +55,7 @@ body {
             @media screen {
                 width: clamp(300px, 80%, 800px);
                 padding: 20px 40px 30px 40px;
-                background-color: $c-article;
+                background-color: $c-main;
             }
 
             section {
@@ -64,7 +67,7 @@ body {
             hr {
                 width: 60%;
                 margin: 30px auto;
-                color: $c-darkblue;
+                color: $c-subtle;
 
                 &:first-of-type {
                     margin-top: 40px;
@@ -77,14 +80,14 @@ body {
 
             h2 {
                 text-align: center;
-                color: $c-accent;
+                color: $c-accent-a;
             }
             h3 {
-                color: $c-blue;
+                color: $c-bright;
             }
 
             em, strong {
-                color: $c-purple;
+                color: $c-accent-b;
             }
 
             center {
@@ -116,7 +119,7 @@ body {
             }
 
             blockquote {
-                border-left: 4px solid $c-darkblue;
+                border-left: 4px solid $c-subtle;
                 padding-left: 15px;
             }
         }
@@ -125,7 +128,7 @@ body {
     footer {
         margin: 20px 0 40px 0;
         text-align: center;
-        color: $c-blue;
+        color: $c-bright;
         opacity: 0.3;
         @media print {
             display: none;
