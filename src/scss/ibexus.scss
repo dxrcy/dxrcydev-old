@@ -17,85 +17,82 @@ $f-serif: initial;
 $f-sans:  Arial, Helvetica, sans-serif;
 
 body {
+    font-family: $f-sans;
     background-color: $c-background;
+    color: $c-text;
 
-    main.ibexus {
-        color: $c-text;
-        font-family: $f-sans;
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $f-serif;
+    }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: $f-serif;
+    a {
+        color: inherit;
+        text-decoration-color: $c-subtle;
+        text-decoration-thickness: 0.5px;
+        &:hover, :focus-within  {
+            text-decoration-color: $c-accent-a;
+        }
+    }
+
+    >.header {
+        @media screen {
+            margin-top: 30px;
+        }
+        h1 {
+            color: $c-bright;
+            margin-bottom: 0;
+        }
+        h2 {
+            color: $c-accent-a;
+        }
+    }
+
+    >article {
+        margin: auto;
+
+        @media screen {
+            width: clamp(300px, 80%, 800px);
+            padding: 20px 40px 30px 40px;
+            background-color: $c-main;
         }
 
-        a {
-            color: inherit;
-            text-decoration-color: $c-subtle;
-            text-decoration-thickness: 0.5px;
-            &:hover, :focus-within  {
-                text-decoration-color: $c-accent-a;
+        hr {
+            width: 60%;
+            margin: 30px auto;
+            color: $c-subtle;
+
+            &:first-of-type {
+                margin-top: 40px;
+            }
+
+            @media print {
+                display: none;
             }
         }
 
-        >.header {
-            @media screen {
-                margin-top: 30px;
-            }
-            h1 {
-                color: $c-bright;
-                margin-bottom: 0;
-            }
-            h2 {
-                color: $c-accent-a;
-            }
+        h2 {
+            text-align: center;
+            color: $c-accent-a;
+        }
+        h3 {
+            color: $c-bright;
         }
 
-        >article {
-            margin: auto;
+        ul {
+            display: inline-block;
+        }
+        center >ul {
+            margin: 0px;
+            padding: 0px;
+        }
 
-            @media screen {
-                width: clamp(300px, 80%, 800px);
-                padding: 20px 40px 30px 40px;
-                background-color: $c-main;
-            }
+        blockquote {
+            border-left: 4px solid $c-subtle;
+            padding-left: 15px;
+        }
 
-            hr {
-                width: 60%;
-                margin: 30px auto;
-                color: $c-subtle;
-
-                &:first-of-type {
-                    margin-top: 40px;
-                }
-
-                @media print {
-                    display: none;
-                }
-            }
-
-            h2 {
-                text-align: center;
-                color: $c-accent-a;
-            }
-            h3 {
-                color: $c-bright;
-            }
-
-            ul {
-                display: inline-block;
-            }
-            center >ul {
-                margin: 0px;
-                padding: 0px;
-            }
-
-            blockquote {
-                border-left: 4px solid $c-subtle;
-                padding-left: 15px;
-            }
-
-            em, strong {
-                color: $c-accent-b;
-            }
+        em, strong {
+            color: $c-accent-b;
         }
     }
 

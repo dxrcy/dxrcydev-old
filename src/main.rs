@@ -14,7 +14,7 @@ fn main() {
 }
 
 fn at_index() -> Document {
-    view! { @use_base {
+    view! { @use_base
         center ."header" {
             h1 { "darcy's website" }
             p {
@@ -213,12 +213,12 @@ fn at_index() -> Document {
         footer {
             "Thanks for checking out my website!"
         }
-    } }
+    }
     .into()
 }
 
 fn at_404() -> Document {
-    view! { @use_base {
+    view! { @use_base
         center ."header" {
             h1 { "darcy's website" }
             h2 { "404 - Not found" }
@@ -226,11 +226,11 @@ fn at_404() -> Document {
                 a [href=url!()] { "Did you mean to go the main page?" }
             }
         }
-    } }
+    }
     .into()
 }
 
-fn use_base(children: View) -> View {
+fn use_base() -> View {
     view! {
         HEAD {
             @use_meta [Meta::new()
@@ -245,10 +245,6 @@ fn use_base(children: View) -> View {
             link [rel="shortcut icon", href=url!("static/icon.png")]/
             link [rel="stylesheet", href=url!("css/base.css")]/
             @ssg::use_autoreload
-        }
-
-        main ."ibexus" {
-            [children]
         }
     }
 }

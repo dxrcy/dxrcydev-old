@@ -1,40 +1,38 @@
 @import "src/scss/ibexus.scss";
 
 body {
-    main.ibexus {
-        >.header {
-            p span {
-                color: $c-bright;
-                padding: 0 10px;
-            }
+    >.header {
+        p span {
+            color: $c-bright;
+            padding: 0 10px;
         }
+    }
 
-        >article {
-            ul {
-                margin-top: 0;
-                &.small-list {
-                    li:not(:first-of-type) {
-                        margin-top: 15px;
-                    }
+    >article {
+        ul {
+            margin-top: 0;
+            &.small-list {
+                li:not(:first-of-type) {
+                    margin-top: 15px;
                 }
-                &.big-list {
+            }
+            &.big-list {
+                li:not(:first-of-type) {
+                    margin-top: 30px;
+                }
+                @media (max-width: 600px) {
+                    padding-left: 10px;
                     li:not(:first-of-type) {
-                        margin-top: 30px;
-                    }
-                    @media (max-width: 600px) {
-                        padding-left: 10px;
-                        li:not(:first-of-type) {
-                            margin-top: 50px;
-                        }
+                        margin-top: 50px;
                     }
                 }
             }
         }
+    }
 
-        footer {
-            @media print {
-                display: none;
-            }
+    footer {
+        @media print {
+            display: none;
         }
     }
 }
