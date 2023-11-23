@@ -20,6 +20,7 @@ body {
     font-family: $f-sans;
     background-color: $c-background;
     color: $c-text;
+    text-align: center;
 
     h1, h2, h3, h4, h5, h6 {
         font-family: $f-serif;
@@ -27,18 +28,17 @@ body {
 
     a {
         color: inherit;
-        text-decoration-color: $c-subtle;
+
+        text-decoration: none;
         text-decoration-thickness: 0.5px;
         &:hover, :focus-within  {
+            text-decoration: underline;
             text-decoration-color: $c-accent-a;
         }
     }
 
     >.header {
         text-align: center;
-        @media screen {
-            margin-top: 30px;
-        }
         h1 {
             color: $c-bright;
             margin-bottom: 0;
@@ -49,26 +49,22 @@ body {
     }
 
     >article {
-        margin: auto;
+        display: inline-block;
+        text-align: initial;
+
+        &:not(.manual-width) {
+            @media screen {
+                width: clamp(300px, 80%, 800px);
+            }
+        }
 
         @media screen {
-            width: clamp(300px, 80%, 800px);
             padding: 20px 40px 30px 40px;
             background-color: $c-main;
         }
 
         hr {
-            width: 60%;
-            margin: 30px auto;
             color: $c-subtle;
-
-            &:first-of-type {
-                margin-top: 40px;
-            }
-
-            @media print {
-                display: none;
-            }
         }
 
         h2 {
@@ -79,12 +75,9 @@ body {
             color: $c-bright;
         }
 
-        ul {
+        ul, ol {
             display: inline-block;
-        }
-        center >ul {
-            margin: 0px;
-            padding: 0px;
+            text-align: initial;
         }
 
         blockquote {

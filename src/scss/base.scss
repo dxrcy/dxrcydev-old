@@ -1,7 +1,15 @@
 @import "src/scss/ibexus.scss";
 
 body {
+    a {
+        text-decoration: underline;
+        text-decoration-color: $c-subtle;
+    }
+
     >.header {
+        @media screen {
+            margin-top: 30px;
+        }
         p span {
             color: $c-bright;
             padding: 0 10px;
@@ -26,6 +34,22 @@ body {
                         margin-top: 50px;
                     }
                 }
+            }
+        }
+
+        center > ul {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        hr {
+            width: 60%;
+            margin: 30px auto;
+            &:first-of-type {
+                margin-top: 40px;
+            }
+            @media print {
+                display: none;
             }
         }
     }
