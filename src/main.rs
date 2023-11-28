@@ -14,7 +14,7 @@ fn main() {
 }
 
 fn at_index() -> Document {
-    view! { @use_base
+    view! { @use_base []
         div ."header" {
             h1 { "darcy's website" }
             p {
@@ -218,7 +218,7 @@ fn at_index() -> Document {
 }
 
 fn at_404() -> Document {
-    view! { @use_base
+    view! { @use_base []
         center ."header" {
             h1 { "darcy's website" }
             h2 { "404 - Not found" }
@@ -244,7 +244,7 @@ fn use_base() -> View {
             title { "darcy's website" }
             link [rel="shortcut icon", href=url!("static/icon.png")]/
             link [rel="stylesheet", href=url!("css/base.css")]/
-            @ssg::use_autoreload
+            @ssg::use_autoreload []
         }
     }
 }
