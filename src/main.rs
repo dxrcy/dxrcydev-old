@@ -73,6 +73,20 @@ fn at_index() -> Document {
             hr/
             section { h2 { "Projects" }
                 ul ."big-list" {
+                    li { h3 { em{"EveryGarf"} ~ "- Download every"~i{"Garfield"}~"comic as an image" }
+                        p {
+                            "A CLI tool which scrapes" ~ a [href="https://gocomics.com"] {i{"GoComics.com"}}
+                            ~ "to download every"~i{"Garfield"}~"comic concurrently."
+                        }
+                        blockquote {
+                            "Check out"
+                            ~ a [href="https://github.com/darccyy/everygarf"]
+                                { "EveryGarf on GitHub" }
+                            // ", or"
+                            // ~ a [href="https://crates.io/crates/everygarf"]
+                            //     { "on Crates.io" }
+                        }
+                    }
                     li { h3 { em{"Ibex"} ~ "- Static site generation framework for Rust" }
                         p {
                             "Write HTML-style templates, which compile to static HTML files."
@@ -105,20 +119,6 @@ fn at_index() -> Document {
                            ", or"
                             ~ a [href="https://darccyy.github.io/cttab"]
                                 { "a live example" }
-                        }
-                    }
-                    li { h3 { em{"EveryGarf"} ~ "- Download every"~i{"Garfield"}~"comic as an image" }
-                        p {
-                            "A CLI tool which scrapes" ~ a [href="https://gocomics.com"] {i{"GoComics.com"}}
-                            ~ "to download every"~i{"Garfield"}~"comic."
-                        }
-                        blockquote {
-                            "Check out"
-                            ~ a [href="https://github.com/darccyy/everygarf"]
-                                { "EveryGarf on GitHub" }
-                            // ", or"
-                            // ~ a [href="https://crates.io/crates/everygarf"]
-                            //     { "on Crates.io" }
                         }
                     }
                     li { h3 { em{"Phonet"} ~ "- Declarative"
