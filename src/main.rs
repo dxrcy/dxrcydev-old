@@ -24,7 +24,7 @@ fn at_index() -> Document {
             }
         }
 
-        article {
+        article ."highlight-links" {
             section { h2 { "About Me" }
                 center {
                     "I like programming and languages."
