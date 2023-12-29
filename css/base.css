@@ -10,12 +10,17 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 body a {
   color: inherit;
-  text-decoration: none;
-  text-decoration-thickness: 0.5px;
-}
-body a:hover, body a :focus-within {
-  text-decoration: underline;
+  text-decoration-line: none;
   text-decoration-color: hsl(0deg, 100%, 77%);
+}
+body a:hover, body a:focus-within {
+  text-decoration-line: underline;
+}
+body .highlight-links a {
+  text-decoration-line: underline;
+}
+body .highlight-links a:not(body .highlight-links a:hover, body .highlight-links a:focus-within) {
+  text-decoration-color: #3e6265;
 }
 body > .header {
   text-align: center;
@@ -74,10 +79,6 @@ body footer::before, body footer::after {
   color: #324043;
 }
 
-body a {
-  text-decoration: underline;
-  text-decoration-color: #3e6265;
-}
 @media screen {
   body > .header {
     margin-top: 30px;
@@ -90,7 +91,7 @@ body > .header p span {
 body > article ul {
   margin-top: 0;
 }
-body > article ul.small-list li:not(:first-of-type) {
+respondaro body > article ul.small-list li:not(:first-of-type) {
   margin-top: 15px;
 }
 body > article ul.big-list li:not(:first-of-type) {
