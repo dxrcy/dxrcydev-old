@@ -32,40 +32,40 @@ body > .header h1 {
 body > .header h2 {
   color: hsl(0deg, 100%, 77%);
 }
-body > section {
+body > main {
   display: inline-block;
   text-align: initial;
 }
 @media screen {
-  body > section:not(.manual-width) {
+  body > main:not(.manual-width) {
     width: clamp(300px, 80%, 800px);
   }
 }
 @media screen {
-  body > section {
+  body > main {
     padding: 20px 40px 30px 40px;
     background-color: hsl(205deg, 19%, 17%);
   }
 }
-body > section hr {
+body > main hr {
   color: #3e6265;
 }
-body > section h2 {
+body > main h2 {
   text-align: center;
   color: hsl(0deg, 100%, 77%);
 }
-body > section h3 {
+body > main h3 {
   color: #87b5b1;
 }
-body > section ul, body > section ol {
+body > main ul, body > main ol {
   display: inline-block;
   text-align: initial;
 }
-body > section blockquote {
+body > main blockquote {
   border-left: 4px solid #3e6265;
   padding-left: 15px;
 }
-body > section em, body > section strong {
+body > main em, body > main strong {
   color: #b686b6;
 }
 body footer {
@@ -91,36 +91,36 @@ body > .header p span {
   color: #87b5b1;
   padding: 0 10px;
 }
-body > section ul {
+body > main ul {
   margin-top: 0;
 }
-respondaro body > section ul.small-list li:not(:first-of-type) {
+respondaro body > main ul.small-list li:not(:first-of-type) {
   margin-top: 15px;
 }
-body > section ul.big-list li:not(:first-of-type) {
+body > main ul.big-list li:not(:first-of-type) {
   margin-top: 30px;
 }
 @media (max-width: 600px) {
-  body > section ul.big-list {
+  body > main ul.big-list {
     padding-left: 10px;
   }
-  body > section ul.big-list li:not(:first-of-type) {
+  body > main ul.big-list li:not(:first-of-type) {
     margin-top: 50px;
   }
 }
-body > section .center > ul {
+body > main .center > ul {
   margin: 0px;
   padding: 0px;
 }
-body > section hr {
+body > main hr {
   width: 60%;
   margin: 30px auto;
 }
-body > section hr:first-of-type {
+body > main hr:first-of-type {
   margin-top: 40px;
 }
 @media print {
-  body > section hr {
+  body > main hr {
     display: none;
   }
 }
