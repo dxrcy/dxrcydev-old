@@ -14,7 +14,8 @@ fn main() {
 }
 
 fn at_index() -> Document {
-    view! { @use_base []
+    document! { [lang="en"]
+        @use_base []
         div ."header" {
             h1 { "darcy's website" }
             p {
@@ -24,17 +25,17 @@ fn at_index() -> Document {
             }
         }
 
-        article ."highlight-links" {
-            section { h2 { "About Me" }
-                center {
+        section ."highlight-links" {
+            article { h2 { "About Me" }
+                div ."center" {
                     "I like programming and languages."
                     ~"I speak English, Esperanto, and Rust."
                 }
             }
             
             hr/
-            section { h2 { "Links" }
-                center {
+            article { h2 { "Links" }
+                div ."center" {
                     ul {
                         li { a [href="https://github.com/darccyy"] { "My GitHub Profile" } }
                     }
@@ -42,7 +43,7 @@ fn at_index() -> Document {
             }
 
             hr/
-            section { h2 { "Programming Experience" }
+            article { h2 { "Programming Experience" }
                 h3 { "Rust" }
                 p { "Rust is my favourite language, due to its type system, macros, and speed." }
                 ul {
@@ -71,7 +72,7 @@ fn at_index() -> Document {
             }
 
             hr/
-            section { h2 { "Projects" }
+            article { h2 { "Projects" }
                 ul ."big-list" {
                     li { h3 { em{"EveryGarf"} ~ "- Download every"~i{"Garfield"}~"comic as an image" }
                         p {
@@ -199,7 +200,7 @@ fn at_index() -> Document {
             }
 
             hr/
-            section { h2 { "Workflow" }
+            article { h2 { "Workflow" }
                 p {
                     "All my"~i{"dotfiles"}~"are available"
                     ~a[href="https://github.com/darccyy/dotfiles"]{"here"}
@@ -218,8 +219,9 @@ fn at_index() -> Document {
 }
 
 fn at_404() -> Document {
-    view! { @use_base []
-        center ."header" {
+    document! { [lang="en"]
+        @use_base []
+        div ."center header" {
             h1 { "darcy's website" }
             h2 { "404 - Not found" }
             p {
