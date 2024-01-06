@@ -32,40 +32,40 @@ body > .header h1 {
 body > .header h2 {
   color: hsl(0deg, 100%, 77%);
 }
-body > article {
+body > section {
   display: inline-block;
   text-align: initial;
 }
 @media screen {
-  body > article:not(.manual-width) {
+  body > section:not(.manual-width) {
     width: clamp(300px, 80%, 800px);
   }
 }
 @media screen {
-  body > article {
+  body > section {
     padding: 20px 40px 30px 40px;
     background-color: hsl(205deg, 19%, 17%);
   }
 }
-body > article hr {
+body > section hr {
   color: #3e6265;
 }
-body > article h2 {
+body > section h2 {
   text-align: center;
   color: hsl(0deg, 100%, 77%);
 }
-body > article h3 {
+body > section h3 {
   color: #87b5b1;
 }
-body > article ul, body > article ol {
+body > section ul, body > section ol {
   display: inline-block;
   text-align: initial;
 }
-body > article blockquote {
+body > section blockquote {
   border-left: 4px solid #3e6265;
   padding-left: 15px;
 }
-body > article em, body > article strong {
+body > section em, body > section strong {
   color: #b686b6;
 }
 body footer {

@@ -32,40 +32,40 @@ body > .header h1 {
 body > .header h2 {
   color: hsl(0deg, 100%, 77%);
 }
-body > article {
+body > section {
   display: inline-block;
   text-align: initial;
 }
 @media screen {
-  body > article:not(.manual-width) {
+  body > section:not(.manual-width) {
     width: clamp(300px, 80%, 800px);
   }
 }
 @media screen {
-  body > article {
+  body > section {
     padding: 20px 40px 30px 40px;
     background-color: hsl(205deg, 19%, 17%);
   }
 }
-body > article hr {
+body > section hr {
   color: #3e6265;
 }
-body > article h2 {
+body > section h2 {
   text-align: center;
   color: hsl(0deg, 100%, 77%);
 }
-body > article h3 {
+body > section h3 {
   color: #87b5b1;
 }
-body > article ul, body > article ol {
+body > section ul, body > section ol {
   display: inline-block;
   text-align: initial;
 }
-body > article blockquote {
+body > section blockquote {
   border-left: 4px solid #3e6265;
   padding-left: 15px;
 }
-body > article em, body > article strong {
+body > section em, body > section strong {
   color: #b686b6;
 }
 body footer {
@@ -79,6 +79,9 @@ body footer::before, body footer::after {
   color: #324043;
 }
 
+body .center {
+  text-align: center;
+}
 @media screen {
   body > .header {
     margin-top: 30px;
@@ -88,36 +91,36 @@ body > .header p span {
   color: #87b5b1;
   padding: 0 10px;
 }
-body > article ul {
+body > section ul {
   margin-top: 0;
 }
-respondaro body > article ul.small-list li:not(:first-of-type) {
+respondaro body > section ul.small-list li:not(:first-of-type) {
   margin-top: 15px;
 }
-body > article ul.big-list li:not(:first-of-type) {
+body > section ul.big-list li:not(:first-of-type) {
   margin-top: 30px;
 }
 @media (max-width: 600px) {
-  body > article ul.big-list {
+  body > section ul.big-list {
     padding-left: 10px;
   }
-  body > article ul.big-list li:not(:first-of-type) {
+  body > section ul.big-list li:not(:first-of-type) {
     margin-top: 50px;
   }
 }
-body > article center > ul {
+body > section .center > ul {
   margin: 0px;
   padding: 0px;
 }
-body > article hr {
+body > section hr {
   width: 60%;
   margin: 30px auto;
 }
-body > article hr:first-of-type {
+body > section hr:first-of-type {
   margin-top: 40px;
 }
 @media print {
-  body > article hr {
+  body > section hr {
     display: none;
   }
 }
