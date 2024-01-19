@@ -184,6 +184,9 @@ fn at_index() -> Document {
                 h3 { "Other projects" }
                 p { "Which are either unmaintained or less interesting." }
                 ul ."small-list" {
+                    li { a [href="https://darccyy.github.io/color"]
+                        { "Colour Sliders" }
+                    }
                     li { a [href="https://github.com/darccyy/recipe-lang"]
                         { "Programming language written like a cooking recipe" }
                     }
