@@ -67,7 +67,8 @@ fn at_index() -> Document {
                     li { "Previously, Python and AutoHotkey, but I have not used them in a while." }
                 }
                 p {
-                    "I also plan to learn Go and C."
+                    "I am currently learning Zig."
+                    ~ "I also plan to learn Go and C."
                 }
             }
 
@@ -198,6 +199,9 @@ fn at_index() -> Document {
                     }
                     li { a [href="https://github.com/darccyy/lisp"]
                         { "Simple"~i{"Lisp"}"-like programming language" }
+                    }
+                    li { a [href="https://github.com/darccyy/scripts"]
+                        { "Some POSIX-compliant shell scripts" }
                     }
                 }
             }
