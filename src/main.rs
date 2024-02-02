@@ -37,7 +37,7 @@ fn at_index() -> Document {
             article { h2 { "Links" }
                 div ."center" {
                     ul {
-                        li { a [href="https://github.com/darccyy"] { "My GitHub Profile" } }
+                        li { a [href="https://github.com/dxrcy"] { "My GitHub Profile" } }
                     }
                 }
             }
@@ -82,7 +82,7 @@ fn at_index() -> Document {
                         }
                         blockquote {
                             "Check out"
-                            ~ a [href="https://github.com/darccyy/everygarf"]
+                            ~ a [href="https://github.com/dxrcy/everygarf"]
                                 { "EveryGarf on GitHub" }
                             // ", or"
                             // ~ a [href="https://crates.io/crates/everygarf"]
@@ -99,13 +99,13 @@ fn at_index() -> Document {
                         }
                         blockquote {
                             "Check out"
-                            ~ a [href="https://github.com/darccyy/ibex"]
+                            ~ a [href="https://github.com/dxrcy/ibex"]
                                 { "Ibex on GitHub" }
                             ","
-                            ~ a [href="https://github.com/darccyy/ibex-template"]
+                            ~ a [href="https://github.com/dxrcy/ibex-template"]
                                 { "a basic SSG template" }
                            ", or"
-                            ~ a [href="https://github.com/darccyy/darccyy.github.io"]
+                            ~ a [href="https://github.com/dxrcy/dxrcy.github.io"]
                                 { "the source code for"~b{"this"}~"website" }
                         }
                     }
@@ -116,10 +116,10 @@ fn at_index() -> Document {
                         }
                         blockquote {
                             "Check out"
-                            ~ a [href="https://github.com/darccyy/cttab"]
+                            ~ a [href="https://github.com/dxrcy/cttab"]
                                 { "CTTab on GitHub" }
                            ", or"
-                            ~ a [href="https://darccyy.github.io/cttab"]
+                            ~ a [href="https://dxrcy.github.io/cttab"]
                                 { "a live example" }
                         }
                     }
@@ -132,7 +132,7 @@ fn at_index() -> Document {
                         }
                         blockquote {
                             "Check out"
-                            ~ a [href="https://github.com/darccyy/phonet"]
+                            ~ a [href="https://github.com/dxrcy/phonet"]
                                 { "Phonet on GitHub" }
                             ", or on"
                             ~ a [href="https://crates.io/crates/phonet"]
@@ -145,10 +145,10 @@ fn at_index() -> Document {
                         }
                         blockquote {
                             "Check out"
-                            ~ a [href="https://darccyy.github.io/garfeo"]
+                            ~ a [href="https://dxrcy.github.io/garfeo"]
                                 { "Garfield Esperanto (website)" }
                             ", or"
-                            ~ a [href="https://github.com/darccyy/garfeo"]
+                            ~ a [href="https://github.com/dxrcy/garfeo"]
                                 { "the source code" }
                         }
                     }
@@ -173,10 +173,10 @@ fn at_index() -> Document {
                         }
                         blockquote {
                             "Check out"
-                            ~ a [href="https://darccyy.github.io/apple"]
+                            ~ a [href="https://dxrcy.github.io/apple"]
                                 { "'Apple'" }
                             ", or"
-                            ~ a [href="https://github.com/darccyy/apple"]
+                            ~ a [href="https://github.com/dxrcy/apple"]
                                 { "the source code" }
                         }
                     }
@@ -185,22 +185,22 @@ fn at_index() -> Document {
                 h3 { "Other projects" }
                 p { "Which are either unmaintained or less interesting." }
                 ul ."small-list" {
-                    li { a [href="https://darccyy.github.io/color"]
+                    li { a [href="https://dxrcy.github.io/color"]
                         { "Colour Sliders" }
                     }
-                    li { a [href="https://github.com/darccyy/recipe-lang"]
+                    li { a [href="https://github.com/dxrcy/recipe-lang"]
                         { "Programming language written like a cooking recipe" }
                     }
-                    li { a [href="https://github.com/darccyy/mcimg"]
+                    li { a [href="https://github.com/dxrcy/mcimg"]
                         { "Convert pixels of an image into"~i{"Minecraft"}~"blocks" }
                     }
-                    li { a [href="https://github.com/darccyy/unreact"]
+                    li { a [href="https://github.com/dxrcy/unreact"]
                         { i{"Unreact"}~"- An old SSG framework using Handlebars. Predecesor to"~i{"Ibex"}"" }
                     }
-                    li { a [href="https://github.com/darccyy/lisp"]
+                    li { a [href="https://github.com/dxrcy/lisp"]
                         { "Simple"~i{"Lisp"}"-like programming language" }
                     }
-                    li { a [href="https://github.com/darccyy/scripts"]
+                    li { a [href="https://github.com/dxrcy/scripts"]
                         { "Some POSIX-compliant shell scripts" }
                     }
                 }
@@ -210,7 +210,7 @@ fn at_index() -> Document {
             article { h2 { "Workflow" }
                 p {
                     "All my"~i{"dotfiles"}~"are available"
-                    ~a[href="https://github.com/darccyy/dotfiles"]{"here"}
+                    ~a[href="https://github.com/dxrcy/dotfiles"]{"here"}
                     ", if you are interested."
                 }
                 p { strong{"Operating System:"} ~ "EndevourOS (Arch-based Linux), with i3 Window Manager." }

@@ -2,7 +2,7 @@
 
 A simple website.
 
-- [Live on GitHub Pages](https://darccyy.github.io)
+- [Live on GitHub Pages](https://dxrcy.github.io)
 
-Made with [Ibex](https://github.com/darccyy/ibex).
+Made with [Ibex](https://github.com/dxrcy/ibex).
 
