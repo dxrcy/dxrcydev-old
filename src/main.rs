@@ -26,7 +26,7 @@ fn at_index() -> Document {
         }
 
         main ."highlight-links" {
-            article { h2 { "About Me" }
+            article { h2 #"about" { "About Me" }
                 div ."center" {
                     "I like programming and languages."
                     ~"I speak English, Esperanto, and Rust."
@@ -34,7 +34,7 @@ fn at_index() -> Document {
             }
             
             hr/
-            article { h2 { "Links" }
+            article { h2 #"links" { "Links" }
                 div ."center" {
                     ul {
                         li { a [href="https://github.com/dxrcy"] { "My GitHub Profile" } }
@@ -43,7 +43,7 @@ fn at_index() -> Document {
             }
 
             hr/
-            article { h2 { "Programming Experience" }
+            article { h2 #"experience" { "Programming Experience" }
                 h3 { "Rust" }
                 p { "Rust is my favourite language, due to its type system, macros, and speed." }
                 ul {
@@ -73,7 +73,7 @@ fn at_index() -> Document {
             }
 
             hr/
-            article { h2 { "Projects" }
+            article { h2 #"projects" { "Projects" }
                 ul ."big-list" {
                     li { h3 { em{"EveryGarf"} ~ "- Download every"~i{"Garfield"}~"comic as an image" }
                         p {
@@ -182,7 +182,7 @@ fn at_index() -> Document {
                     }
                 }
 
-                h3 { "Other projects" }
+                h3 #"other-projects" { "Other projects" }
                 p { "Which are either unmaintained or less interesting." }
                 ul ."small-list" {
                     li { a [href="https://dxrcy.dev/color"]
@@ -207,7 +207,7 @@ fn at_index() -> Document {
             }
 
             hr/
-            article { h2 { "Workflow" }
+            article { h2 #"workflow" { "Workflow" }
                 p {
                     "All my"~i{"dotfiles"}~"are available"
                     ~a[href="https://github.com/dxrcy/dotfiles"]{"here"}
