@@ -105,7 +105,7 @@ fn at_index() -> Document {
                             ~ a [href="https://github.com/dxrcy/ibex-template"]
                                 { "a basic SSG template" }
                            ", or"
-                            ~ a [href="https://github.com/dxrcy/dxrcy.github.io"]
+                            ~ a [href="https://github.com/dxrcy/dxrcy.dev"]
                                 { "the source code for"~b{"this"}~"website" }
                         }
                     }
@@ -119,7 +119,7 @@ fn at_index() -> Document {
                             ~ a [href="https://github.com/dxrcy/cttab"]
                                 { "CTTab on GitHub" }
                            ", or"
-                            ~ a [href="https://dxrcy.github.io/cttab"]
+                            ~ a [href="https://dxrcy.dev/cttab"]
                                 { "a live example" }
                         }
                     }
@@ -145,7 +145,7 @@ fn at_index() -> Document {
                         }
                         blockquote {
                             "Check out"
-                            ~ a [href="https://dxrcy.github.io/garfeo"]
+                            ~ a [href="https://dxrcy.dev/garfeo"]
                                 { "Garfield Esperanto (website)" }
                             ", or"
                             ~ a [href="https://github.com/dxrcy/garfeo"]
@@ -173,7 +173,7 @@ fn at_index() -> Document {
                         }
                         blockquote {
                             "Check out"
-                            ~ a [href="https://dxrcy.github.io/apple"]
+                            ~ a [href="https://dxrcy.dev/apple"]
                                 { "'Apple'" }
                             ", or"
                             ~ a [href="https://github.com/dxrcy/apple"]
@@ -185,7 +185,7 @@ fn at_index() -> Document {
                 h3 { "Other projects" }
                 p { "Which are either unmaintained or less interesting." }
                 ul ."small-list" {
-                    li { a [href="https://dxrcy.github.io/color"]
+                    li { a [href="https://dxrcy.dev/color"]
                         { "Colour Sliders" }
                     }
                     li { a [href="https://github.com/dxrcy/recipe-lang"]
