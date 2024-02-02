@@ -159,10 +159,10 @@ fn at_index() -> Document {
                         }
                         blockquote {
                             "Check out"
-                            ~ a [href="https://trustworthytimes.com"]
+                            ~ a [href="https://dxrcy.dev/trustworthytimes"]
                                 { i{"The Trustworthy Times"} }
                             ", or"
-                            ~ a [href="https://github.com/trustworthytimes/trustworthytimes.github.io"]
+                            ~ a [href="https://github.com/dxrcy/trustworthytimes"]
                                 { "the source code" }
                         }
                     }
