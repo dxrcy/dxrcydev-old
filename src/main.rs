@@ -1,7 +1,13 @@
 use ibex::prelude::*;
 use ibex::{routes, ssg};
 
+/// URL of website root, relative to dxrcy.dev or localhost:4000
 const URL_ROOT: &str = "/";
+
+/// URL of production website
+const URL_DOMAIN: &str = "https://dxrcy.dev";
+/// URL of my Github profile
+const URL_GITHUB: &str = "https://github.com/dxrcy";
 
 fn main() {
     let routes = routes! [
@@ -37,7 +43,7 @@ fn at_index() -> Document {
             article { h2 #"links" { "Links" }
                 div ."center" {
                     ul {
-                        li { a [href="https://github.com/dxrcy"] { "My GitHub Profile" } }
+                        li { a [href=URL_GITHUB] { "My GitHub Profile" } }
                     }
                 }
             }
@@ -82,7 +88,7 @@ fn at_index() -> Document {
                         }
                         blockquote {
                             "Check out"
-                            ~ a [href="https://github.com/dxrcy/everygarf"]
+                            ~ a [href=format!("{URL_GITHUB}/everygarf")]
                                 { "EveryGarf on GitHub" }
                             // ", or"
                             // ~ a [href="https://crates.io/crates/everygarf"]
@@ -99,13 +105,13 @@ fn at_index() -> Document {
                         }
                         blockquote {
                             "Check out"
-                            ~ a [href="https://github.com/dxrcy/ibex"]
+                            ~ a [href=format!("{URL_GITHUB}/ibex")]
                                 { "Ibex on GitHub" }
                             ","
-                            ~ a [href="https://github.com/dxrcy/ibex-template"]
+                            ~ a [href=format!("{URL_GITHUB}/ibex-template")]
                                 { "a basic SSG template" }
                            ", or"
-                            ~ a [href="https://github.com/dxrcy/dxrcy.dev"]
+                            ~ a [href=format!("{URL_GITHUB}/dxrcy.github.io")]
                                 { "the source code for"~b{"this"}~"website" }
                         }
                     }
@@ -116,10 +122,10 @@ fn at_index() -> Document {
                         }
                         blockquote {
                             "Check out"
-                            ~ a [href="https://github.com/dxrcy/cttab"]
+                            ~ a [href=format!("{URL_GITHUB}/cttab")]
                                 { "CTTab on GitHub" }
                            ", or"
-                            ~ a [href="https://dxrcy.dev/cttab"]
+                            ~ a [href=format!("{URL_DOMAIN}/cttab")]
                                 { "a live example" }
                         }
                     }
@@ -132,7 +138,7 @@ fn at_index() -> Document {
                         }
                         blockquote {
                             "Check out"
-                            ~ a [href="https://github.com/dxrcy/phonet"]
+                            ~ a [href=format!("{URL_GITHUB}/phonet")]
                                 { "Phonet on GitHub" }
                             ", or on"
                             ~ a [href="https://crates.io/crates/phonet"]
@@ -145,10 +151,10 @@ fn at_index() -> Document {
                         }
                         blockquote {
                             "Check out"
-                            ~ a [href="https://dxrcy.dev/garfeo"]
+                            ~ a [href=format!("{URL_DOMAIN}/garfeo")]
                                 { "Garfield Esperanto (website)" }
                             ", or"
-                            ~ a [href="https://github.com/dxrcy/garfeo"]
+                            ~ a [href=format!("{URL_GITHUB}/garfeo")]
                                 { "the source code" }
                         }
                     }
@@ -159,10 +165,10 @@ fn at_index() -> Document {
                         }
                         blockquote {
                             "Check out"
-                            ~ a [href="https://dxrcy.dev/trustworthytimes"]
+                            ~ a [href=format!("{URL_DOMAIN}/trustworthytimes")]
                                 { i{"The Trustworthy Times"} }
                             ", or"
-                            ~ a [href="https://github.com/dxrcy/trustworthytimes"]
+                            ~ a [href=format!("{URL_GITHUB}/trustworthytimes")]
                                 { "the source code" }
                         }
                     }
@@ -173,10 +179,10 @@ fn at_index() -> Document {
                         }
                         blockquote {
                             "Check out"
-                            ~ a [href="https://dxrcy.dev/apple"]
+                            ~ a [href=format!("{URL_DOMAIN}/apple")]
                                 { "'Apple'" }
                             ", or"
-                            ~ a [href="https://github.com/dxrcy/apple"]
+                            ~ a [href=format!("{URL_GITHUB}/apple")]
                                 { "the source code" }
                         }
                     }
@@ -185,22 +191,22 @@ fn at_index() -> Document {
                 h3 #"other-projects" { "Other projects" }
                 p { "Which are either unmaintained or less interesting." }
                 ul ."small-list" {
-                    li { a [href="https://dxrcy.dev/color"]
+                    li { a [href=format!("{URL_DOMAIN}/color")]
                         { "Colour Sliders" }
                     }
-                    li { a [href="https://github.com/dxrcy/recipe-lang"]
+                    li { a [href=format!("{URL_GITHUB}/recipe-lang")]
                         { "Programming language written like a cooking recipe" }
                     }
-                    li { a [href="https://github.com/dxrcy/mcimg"]
+                    li { a [href=format!("{URL_GITHUB}/mcimg")]
                         { "Convert pixels of an image into"~i{"Minecraft"}~"blocks" }
                     }
-                    li { a [href="https://github.com/dxrcy/unreact"]
+                    li { a [href=format!("{URL_GITHUB}/unreact")]
                         { i{"Unreact"}~"- An old SSG framework using Handlebars. Predecesor to"~i{"Ibex"}"" }
                     }
-                    li { a [href="https://github.com/dxrcy/lisp"]
+                    li { a [href=format!("{URL_GITHUB}/lisp")]
                         { "Simple"~i{"Lisp"}"-like programming language" }
                     }
-                    li { a [href="https://github.com/dxrcy/scripts"]
+                    li { a [href=format!("{URL_GITHUB}/scripts")]
                         { "Some POSIX-compliant shell scripts" }
                     }
                 }
@@ -210,7 +216,7 @@ fn at_index() -> Document {
             article { h2 #"workflow" { "Workflow" }
                 p {
                     "All my"~i{"dotfiles"}~"are available"
-                    ~a[href="https://github.com/dxrcy/dotfiles"]{"here"}
+                    ~a[href=format!("{URL_GITHUB}/dotfiles")]{"here"}
                     ", if you are interested."
                 }
                 p { strong{"Operating System:"} ~ "EndevourOS (Arch-based Linux), with i3 Window Manager." }
@@ -243,7 +249,7 @@ fn use_base() -> View {
     view! {
         HEAD {
             @use_meta [Meta::new()
-                .url("https://dxrcy.dev/")
+                .url(URL_DOMAIN)
                 .title("darcy's website")
                 .desc("Welcome to my website.")
                 .image(url!("static/icon.png"))
