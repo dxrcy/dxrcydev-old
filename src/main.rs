@@ -243,7 +243,7 @@ fn use_base() -> View {
     view! {
         HEAD {
             @use_meta [Meta::new()
-                .url(url!())
+                .url("https://dxrcy.dev/")
                 .title("darcy's website")
                 .desc("Welcome to my website.")
                 .image(url!("static/icon.png"))
