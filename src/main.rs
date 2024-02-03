@@ -62,13 +62,13 @@ fn at_index() -> Document {
                 h3 { "Other" }
                 ul {
                     li { "Posix-compliant shell scripting (like Bash)" }
+                    li { "Some Lua and Haskell" }
                     li { "Popular CLI tools, like coreutils, FFmpeg, etc." }
-                    li { "Some Lua, Haskell, and Handlebars" }
-                    li { "Previously, Python and AutoHotkey, but I have not used them in a while." }
+                    li { "Previously, Python, Handlebars, and AutoHotkey, but I have not used them in a while." }
                 }
                 p {
-                    "I am currently learning Zig."
-                    ~ "I also plan to learn Go and C."
+                    "I am currently learning Zig,"
+                    ~ "and I plan to learn Go and C after."
                 }
             }
 
