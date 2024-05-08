@@ -72,7 +72,7 @@ fn at_index() -> Document {
                     li { "Popular CLI tools, like coreutils, FFmpeg, etc." }
                     li { "Previously, Python, Handlebars, and AutoHotkey, but I have not used them in a while." }
                 }
-                p { "I am currently learning Zig and Go" }
+                p { "I am currently learning C 💪" }
             }
 
             hr/
