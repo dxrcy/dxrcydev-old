@@ -43,7 +43,7 @@ body > main {
 }
 @media screen {
   body > main {
-    padding: 20px 40px 30px 40px;
+    padding: 20px 40px 60px 40px;
     background-color: hsl(205deg, 19%, 17%);
   }
 }
