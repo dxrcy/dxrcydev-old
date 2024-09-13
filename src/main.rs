@@ -34,8 +34,14 @@ fn at_index() -> Document {
         main ."highlight-links" {
             article { h2 #"about" { "About Me" }
                 div ."center" {
-                    "I like programming and languages."
-                    ~"I speak English, Esperanto, and Rust."
+                    p {
+                        "I like programming and languages."
+                        ~"I speak English, Esperanto, and Rust."
+                    }
+                    p {
+                        "Interested in low-level and systems programming,"
+                        ~"and web development."
+                    }
                 }
             }
             
@@ -50,34 +56,74 @@ fn at_index() -> Document {
 
             hr/
             article { h2 #"experience" { "Programming Experience" }
+                h3 { "C / C++" }
+                p { "C is a great language, and C++ provides a few nice improvements." }
+                ul {
+                    li { "Compiler and interpreter programming"
+                        @minor_link["https://github.com/dxrcy/lasim"]
+                    }
+                    li { "Low-level programming in Unix environments"
+                        @minor_link["https://github.com/dxrcy/vimcurses"]
+                    }
+                    li { "Command-line tools"
+                        @minor_link["https://github.com/dxrcy/xml-parse"]
+                    }
+                }
                 h3 { "Rust" }
                 p { "Rust is my favourite language, due to its type system, macros, and speed." }
                 ul {
-                    li { "CLI apps and simple tools" }
-                    li { "Static site generation frameworks" }
-                    li { "Procedural macros" }
-                    li { "Egui (UI framework)" }
+                    li { "Command-line tools"
+                        @minor_link["https://github.com/dxrcy/everygarf"]
+                    }
+                    li { "Static site generation frameworks"
+                        @minor_link["https://github.com/dxrcy/ibex"]
+                    }
+                    li { "Image processing"
+                        @minor_link["https://github.com/dxrcy/mcimg"]
+                    }
                     li { "GGez (Graphics framework)" }
+                    li { "Procedural macros and metaprogramming" }
                 }
                 h3 { "Javascript / Typescript" }
+                p { "A necessary skill for front-end web development." }
                 ul {
-                    li { "Client-side vanilla javascript with HTML and CSS or SCSS" }
+                    li { "Client-side vanilla javascript with HTML and CSS or SCSS"
+                        @minor_link["https://github.com/dxrcy/color"]
+                    }
+                    li { "React single page applications"
+                        @minor_link["https://github.com/dxrcy/trustworthytimes"]
+                    }
                     li { "Server-side Node.JS, Express" }
-                    li { "React single page applications" }
                 }
-                h3 { "Other" }
+                h3 { "Other languages which I am familiar with" }
                 ul {
-                    li { "Posix-compliant shell scripting (like Bash)" }
-                    li { "Some Lua, Haskell, and Java" }
+                    li { "Posix-compliant shell scripting (Bash)" }
+                    li { "Some Zig, Java, Lua, and Haskell" }
                     li { "Popular CLI tools, like coreutils, FFmpeg, etc." }
-                    li { "Previously, Python, Handlebars, and AutoHotkey, but I have not used them in a while." }
+                    li { "A bit of experience in Python, Handlebars, and AutoHotkey." }
                 }
-                p { "I am currently learning C 💪" }
             }
 
             hr/
             article { h2 #"projects" { "Projects" }
                 ul ."big-list" {
+                    li { h3 { em{"LASIM"}
+                            ~ "- "
+                            a [href="https://en.wikipedia.org/wiki/Little_Computer_3"] { "LC-3" }
+                            " Assembler & Simulator" }
+                        p {
+                            "An implementation of both an assembler and simulator for the"
+                            ~a [href="https://en.wikipedia.org/wiki/Little_Computer_3"] {
+                                i{ "Little Computer 3" }
+                            }
+                            ~"(LC-3) assembly language."
+                        }
+                        blockquote {
+                            "Check out"
+                            ~ a [href=format!("{URL_GITHUB}/lasim")]
+                                { "LASIM on GitHub" }
+                        }
+                    }
                     li { h3 { em{"EveryGarf"} ~ "- Download every"~i{"Garfield"}~"comic as an image" }
                         p {
                             "A CLI tool which scrapes" ~ a [href="https://gocomics.com"] {i{"GoComics.com"}}
@@ -112,20 +158,6 @@ fn at_index() -> Document {
                                 { "the source code for"~b{"this"}~"website" }
                         }
                     }
-                    li { h3 { em{"CTTab"} ~ "- A customizable 'new tab' page for the browser" }
-                        p {
-                            "Add a background, shortcuts, and notes to your browser's homepage."
-                            ~ "Supports Chromium and Firefox based browsers."
-                        }
-                        blockquote {
-                            "Check out"
-                            ~ a [href=format!("{URL_GITHUB}/cttab")]
-                                { "CTTab on GitHub" }
-                           ", or"
-                            ~ a [href=format!("{URL_DOMAIN}/cttab")]
-                                { "a live example" }
-                        }
-                    }
                     li { h3 { em{"Phonet"} ~ "- Declarative"
                             ~ a [href="https://en.wikipedia.org/wiki/Phonotactics"] {"phonotactics"}
                             ~ "validation, using Regex"
@@ -155,20 +187,6 @@ fn at_index() -> Document {
                                 { "the source code" }
                         }
                     }
-                    li { h3 { em{"The Trustworthy Times"} ~ "- A satirical news website (funny)" }
-                        p {
-                            "A silly little static website with funny fake news articles."
-                            ~ "I might one day port it to"~i{"Ibex"}"."
-                        }
-                        blockquote {
-                            "Check out"
-                            ~ a [href=format!("{URL_DOMAIN}/trustworthytimes")]
-                                { i{"The Trustworthy Times"} }
-                            ", or"
-                            ~ a [href=format!("{URL_GITHUB}/trustworthytimes")]
-                                { "the source code" }
-                        }
-                    }
                     li { h3 { em{"'Apple'"} ~ "- Breakthrough innovation in the fields of web design and the contemporary arts" }
                         p {
                             "As my most ambitious project yet, this website combines both cutting-edge"
@@ -186,25 +204,91 @@ fn at_index() -> Document {
                 }
 
                 h3 #"other-projects" { "Other projects" }
-                p { "Which are either unmaintained or less interesting." }
                 ul ."small-list" {
                     li { a [href=format!("{URL_DOMAIN}/color")]
                         { "Colour Sliders" }
                     }
+                    li { a [href=format!("{URL_GITHUB}/golad")]
+                        { "Conway's Game of Life simulator written in C" }
+                    }
                     li { a [href=format!("{URL_GITHUB}/recipe-lang")]
                         { "Programming language written like a cooking recipe" }
                     }
-                    li { a [href=format!("{URL_GITHUB}/mcimg")]
-                        { "Convert pixels of an image into"~i{"Minecraft"}~"blocks" }
-                    }
-                    li { a [href=format!("{URL_GITHUB}/unreact")]
-                        { i{"Unreact"}~"- An old SSG framework using Handlebars. Predecesor to"~i{"Ibex"}"" }
+                    li { a [href=format!("{URL_GITHUB}/sorting")]
+                        { "Sorting algorithm visualizer" }
                     }
                     li { a [href=format!("{URL_GITHUB}/lisp")]
                         { "Simple"~i{"Lisp"}"-like programming language" }
                     }
+                    li { a [href=format!("{URL_GITHUB}/hangman")]
+                        { "Collection of command-line hangman examples in a few programming languages." }
+                    }
+                    li { a [href=format!("{URL_GITHUB}/mcimg")]
+                        { "Convert pixels of an image into"~i{"Minecraft"}~"blocks" }
+                    }
+                    li { a [href=format!("{URL_GITHUB}/vimcurses")]
+                        { "Simple single-line text input with vim keybinds in ncurses" }
+                    }
+                    li { a [href=format!("{URL_GITHUB}/cttab")]
+                        { "Customizable 'new tab' page for the browser" }
+                    }
                     li { a [href=format!("{URL_GITHUB}/scripts")]
                         { "Some POSIX-compliant shell scripts" }
+                    }
+                    li { a [href=format!("{URL_GITHUB}/markup-example")]
+                        { "Markup-to-html compiler example" }
+                    }
+                }
+            }
+
+            hr/
+            article { h2 #"contributions" { "Projects I have contributed to" }
+                ul ."big-list" {
+                    li { h3 { em{"Git"} "✨" }
+                        p {
+                            "Fixed a bug relating to integer underflow when"
+                            ~"using a commit timestamp close to Unix Epoch with"
+                            ~"a positive timezone offset."
+                        }
+                        blockquote {
+                            a [href="https://github.com/git/git/pull/1726"] {
+                                "View pull request"
+                            }
+                        }
+                    }
+                    li { h3 { em{"Nvim Tree"} }
+                        p {
+                            "Added support for file filters defined by"
+                            ~"arbitrary Lua functions."
+                        }
+                        blockquote {
+                            a [href="https://github.com/nvim-tree/nvim-tree.lua/pull/2655"] {
+                                "View pull request"
+                            }
+                        }
+                    }
+                    li { h3 { em{"Spotify Downloader"} }
+                        p {
+                            "Fixed a bug relating to incorrect track numbering"
+                            ~"when downloading playlists containing invalid or"
+                            ~" or local files"
+                        }
+                        blockquote {
+                            a [href="https://github.com/spotDL/spotify-downloader/pull/2105"] {
+                                "View pull request"
+                            }
+                        }
+                    }
+                }
+
+                h3 #"other-contributions" { "Other contributions" }
+                // p { "Which are either unmaintained or less interesting." }
+                ul ."small-list" {
+                    li { a [href=format!("https://github.com/zsh-users/zsh-history-substring-search/pull/159")]
+                        { "Zsh History Substring Search" }
+                    }
+                    li { a [href=format!("https://github.com/PolyMeilex/Neothesia/pull/74")]
+                        { "Neothesia" }
                     }
                 }
             }
@@ -212,12 +296,26 @@ fn at_index() -> Document {
             hr/
             article { h2 #"workflow" { "Workflow" }
                 p {
-                    "All my"~i{"dotfiles"}~"are available"
-                    ~a[href=format!("{URL_GITHUB}/dotfiles")]{"here"}
+                    "All my"
+                    ~a [href="https://wiki.archlinux.org/title/Dotfiles"] { "dotfiles" }
+                    ~"are available"
+                    ~a[href=format!("{URL_GITHUB}/dotfiles")]{ strong{"here"} }
                     ", if you are interested."
                 }
-                p { strong{"Operating System:"} ~ "EndevourOS (Arch-based Linux), with i3 Window Manager." }
-                p { strong{"Programming:"}      ~ "Tmux + Neovim + Git" }
+                ul ."small-list" {
+                    li { em{"Operating System:"}
+                        ~ a [href="https://endeavouros.com/"] { "EndevourOS" }
+                        ~ "(Arch-based Linux), with"
+                        ~ a [href="https://github.com/baskerville/bspwm"] { "BSPWM Window Manager" }
+                    }
+                    li { em{"Programming:"}
+                        ~ a [href="https://github.com/tmux/tmux"] { "Tmux" }
+                        ~ "+"
+                        ~ a [href="https://github.com/neovim/neovim"] { "NeoVim" }
+                        ~ "+"
+                        ~ a [href="https://github.com/git/git"] { "Git" }
+                    }
+                }
             }
         }
 
@@ -226,6 +324,14 @@ fn at_index() -> Document {
         }
     }
     .into()
+}
+
+fn minor_link(url: &str) -> View {
+    view! {
+        ~ a ."minor-link" [href=url, target="_blank"] {
+            i { "example ➚" }
+        }
+    }
 }
 
 fn at_404() -> Document {

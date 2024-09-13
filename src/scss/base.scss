@@ -17,10 +17,10 @@ body {
 
     >main {
         ul {
-            margin-top: 0;respondaro
+            margin-top: 0;
             &.small-list {
                 li:not(:first-of-type) {
-                    margin-top: 15px;
+                    margin-top: 5px;
                 }
             }
             &.big-list {
@@ -50,6 +50,13 @@ body {
             @media print {
                 display: none;
             }
+        }
+
+        .minor-link {
+            color: $c-subtle-bright;
+            font-size: 0.8em;
+            margin-left: 0.4em;
+            opacity: 0.8;
         }
     }
 
