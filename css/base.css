@@ -94,8 +94,8 @@ body > .header p span {
 body > main ul {
   margin-top: 0;
 }
-respondaro body > main ul.small-list li:not(:first-of-type) {
-  margin-top: 15px;
+body > main ul.small-list li:not(:first-of-type) {
+  margin-top: 5px;
 }
 body > main ul.big-list li:not(:first-of-type) {
   margin-top: 30px;
@@ -123,6 +123,12 @@ body > main hr:first-of-type {
   body > main hr {
     display: none;
   }
+}
+body > main .minor-link {
+  color: #91aca9;
+  font-size: 0.8em;
+  margin-left: 0.4em;
+  opacity: 0.8;
 }
 @media print {
   body footer {
