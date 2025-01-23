@@ -130,6 +130,9 @@ body > main .minor-link {
   margin-left: 0.4em;
   opacity: 0.8;
 }
+body > main code {
+  filter: brightness(80%);
+}
 @media print {
   body footer {
     display: none;
