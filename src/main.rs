@@ -178,7 +178,7 @@ fn at_index() -> Document {
                     li { h3 { em{"Garf-EO"} ~&ndash;~ "Garfield comics in Esperanto" }
                         h4 { "Language: Rust" }
                         p {
-                            "800+ comics translated to"
+                            "1,000 comics translated to"
                             ~a [href="https://en.wikipedia.org/wiki/Esperanto"]
                                 { "Esperanto" }
                             ~"by your's truly."
