@@ -175,23 +175,23 @@ fn at_index() -> Document {
                                 { "Crates.io" }
                         }
                     }
-                    li { h3 { em{"Garf-EO"} ~&ndash;~ "Garfield comics in Esperanto" }
-                        h4 { "Language: Rust" }
-                        p {
-                            "1,000 comics translated to"
-                            ~a [href="https://en.wikipedia.org/wiki/Esperanto"]
-                                { "Esperanto" }
-                            ~"by your's truly."
-                        }
-                        blockquote {
-                            "Check out"
-                            ~ a [href=format!("{URL_DOMAIN}/garfeo")]
-                                { i{"Garfield Esperanto"} ~"(website)" }
-                            ", or"
-                            ~ a [href=format!("{URL_GITHUB}/garfeo")]
-                                { "the source code" }
-                        }
-                    }
+                    // li { h3 { em{"Garf-EO"} ~&ndash;~ "Garfield comics in Esperanto" }
+                    //     h4 { "Language: Rust" }
+                    //     p {
+                    //         "1,000 comics translated to"
+                    //         ~a [href="https://en.wikipedia.org/wiki/Esperanto"]
+                    //             { "Esperanto" }
+                    //         ~"by your's truly."
+                    //     }
+                    //     blockquote {
+                    //         "Check out"
+                    //         ~ a [href=format!("{URL_DOMAIN}/garfeo")]
+                    //             { i{"Garfield Esperanto"} ~"(website)" }
+                    //         ", or"
+                    //         ~ a [href=format!("{URL_GITHUB}/garfeo")]
+                    //             { "the source code" }
+                    //     }
+                    // }
                     li { h3 { em{"'Apple'"} ~&ndash;~ "Breakthrough innovation in the fields of web design and the contemporary arts" }
                         h4 { "Language: JavaScript / HTML" }
                         p {
