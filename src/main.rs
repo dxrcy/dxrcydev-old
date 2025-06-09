@@ -42,6 +42,12 @@ fn at_index() -> Document {
                         "Interested in low-level and systems programming,"
                         ~"and web development."
                     }
+
+                    p {
+                        "You can find my resume"
+                        ~ a [href=url!("static/Darcy.Burke.Resume.pdf")] { b{"here"} }
+                        "!"
+                    }
                 }
             }
 
