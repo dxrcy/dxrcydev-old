@@ -5,7 +5,7 @@ use ibex::{routes, ssg};
 const URL_ROOT: &str = "/";
 
 /// URL of production website
-const URL_DOMAIN: &str = "https://dxrcy.dev";
+const URL_DOMAIN: &str = "https://dxrcy.dev/dxrcydev-old";
 /// URL of my Github profile
 const URL_GITHUB: &str = "https://github.com/dxrcy";
 
